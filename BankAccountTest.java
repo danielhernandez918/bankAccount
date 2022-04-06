@@ -6,7 +6,7 @@ public class BankAccountTest {
         System.out.println(BankAccount.accountCount());
         user1.depositChecking();
         user1.withdrawChecking();
-        user1.depositSavings();
+        user1.withdrawSavings();
         // System.out.println(user1.getChecking());
         user1.displayAccounts();
         System.out.println(BankAccount.allMoney());

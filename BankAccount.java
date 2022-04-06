@@ -29,24 +29,24 @@ public class BankAccount {
         return this.savingsBalance;
     }
     public void depositChecking() {
-        Scanner sc= new Scanner(System.in); 
         System.out.println("Please enter amount deposited:");
-        double amount = sc.nextInt();
+        String number = System.console().readLine();
+        double amount = Integer.parseInt(number);
         this.checkingBalance += amount;
         totalMoney+= amount;
     }
     public void depositSavings() {
-        Scanner sc= new Scanner(System.in); 
         System.out.println("Please enter amount deposited:");
-        double amount = sc.nextInt();
+        String number = System.console().readLine();
+        double amount = Integer.parseInt(number);
         this.savingsBalance += amount;
         totalMoney+= amount;
     }
     public void withdrawChecking() {
         if (this.checkingBalance > 0) {
-            Scanner sc= new Scanner(System.in); 
             System.out.println("Please enter amount to withdraw:");
-            double amount = sc.nextInt();
+            String number = System.console().readLine();
+            double amount = Integer.parseInt(number);
             this.checkingBalance -= amount;
             totalMoney-= amount;
             }
@@ -56,9 +56,10 @@ public class BankAccount {
         }
     public void withdrawSavings() {
         if (this.savingsBalance > 0) {
-        Scanner sc= new Scanner(System.in); 
+
         System.out.println("Please enter amount to withdraw:");
-        double amount = sc.nextInt();
+        String number = System.console().readLine();
+        double amount = Integer.parseInt(number);
         this.savingsBalance -= amount;
         totalMoney-= amount;
         }
